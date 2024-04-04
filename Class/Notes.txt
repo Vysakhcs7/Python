@@ -1,0 +1,55 @@
+_________________________________________________________________________________________________________________________________________________
+Object-Oriented Programming in Python
+*************************************
+
+Object-Oriented Programming (OOP) is a programming paradigm that revolves around the concept of "objects," 
+which can contain data and code. Python fully supports OOP principles, allowing developers to create reusable and 
+modular code. Below is a detailed note on Object-Oriented Programming in Python:
+
+1. Classes and Objects:
+
+Classes: In Python, a class is a blueprint or a template for creating objects. It defines the attributes (data) and 
+methods (functions) that all instances of the class will have. Classes are defined using the class keyword followed 
+by the class name.
+
+Objects: An object is an instance of a class. It represents a specific entity with its own set of attributes and 
+behaviors. Objects are created using the class constructor method (__init__), which initializes the object's 
+attributes. Multiple objects can be created from the same class, each with its own unique set of attribute values.
+
+2. Encapsulation:
+
+Encapsulation refers to the bundling of data and methods that operate on that data within a single unit, i.e., the class. 
+In Python, encapsulation can be achieved through the use of access specifiers:
+
+Public: Members (attributes and methods) are accessible from outside the class.
+
+Private: Members are accessible only within the class itself. In Python, private members are denoted by prefixing them with 
+double underscores (__).
+
+Protected: Members are accessible within the class itself and its subclasses. In Python, protected members are denoted by 
+prefixing them with a single underscore (_).
+
+3. Inheritance:
+
+Inheritance is a mechanism in which a new class (subclass) can inherit properties and behaviors from an existing class 
+(superclass or parent class). The subclass can extend or modify the functionality of the superclass.
+In Python, a subclass inherits from a superclass by specifying the superclass name inside parentheses after the subclass 
+name in the class definition.
+Inheritance promotes code reuse, as common attributes and methods need not be redefined in every subclass.
+
+4. Polymorphism:
+
+Polymorphism refers to the ability of different objects to respond to the same message (i.e., method call) in different ways. 
+It allows objects of different classes to be treated as objects of a common superclass.
+In Python, polymorphism can be achieved through method overriding, where a method in a subclass has the same name and signature 
+as a method in its superclass. When the method is called on an object, the appropriate method is executed based on the object's 
+actual class.
+
+5. Abstraction:
+
+Abstraction is the process of hiding complex implementation details and showing only the essential features of an object to the 
+outside world. It allows programmers to focus on what an object does rather than how it does it.
+In Python, abstraction can be achieved through the use of abstract classes and interfaces. Abstract classes cannot be instantiated 
+and may contain one or more abstract methods (methods without implementation). Subclasses of abstract classes must provide concrete
+ implementations for all abstract methods.
+_________________________________________________________________________________________________________________________________________________
