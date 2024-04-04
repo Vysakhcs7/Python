@@ -1,10 +1,11 @@
 from bank_acount import *
 
-Vysakh = BankAccount("Vysakh",200)
-Vishnu = BankAccount("Vishnu",1200)
+Vysakh = BankAccount("Vysakh",100)
+Vishnu = BankAccount("Vishnu",200)
 
-Vysakh.getBalance()
-Vishnu.getBalance()
+Vysakh.deposit(400)
+Vishnu.deposit(800)
 
-Vysakh.deposit(500)
-Vishnu.deposit(200)
+Vysakh.withdram(600)
+Vishnu.withdram(100)
+Vysakh.withdram(100)

@@ -1,21 +1,28 @@
-class Animal:
-    def __init__(self, name):
-        self.name = name
-    
-    def speak(self):
-        raise NotImplementedError("Subclass must implement abstract method")
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
-class Dog(Animal):
-    def speak(self):
-        return f"{self.name} says Woof!"
+    def area(self):
+        return self.width * self.height
 
-class Cat(Animal):
-    def speak(self):
-        return f"{self.name} says Meow!"
+    def perimeter(self):
+        return 2 * (self.width + self.height)
 
-# Usage
-dog = Dog("Buddy")
-cat = Cat("Whiskers")
+    def display_details(self):
+        print("Rectangle:")
+        print("Width:",self.width)
+        print("Height:",self.height)
+        print(f"Area: {self.area()}cm²")
+        print(f"Perimeter:{self.perimeter()}cm")
 
-print(dog.speak())  # Output: Buddy says Woof!
-print(cat.speak())  # Output: Whiskers says Meow!
+
+# Get input from the user for width and height
+width = float(input("Enter the width of the rectangle in cm: "))
+height = float(input("Enter the height of the rectangle in cm: "))
+
+# Create an instance of the Rectangle class with user-provided values
+oRectangle = Rectangle(width, height)
+
+# Call the display_details method to display the rectangle's details
+oRectangle.display_details()

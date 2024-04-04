@@ -14,3 +14,11 @@ class BankAccount:
       print(f"Deposit Complete")
       self.getBalance()
 
+    def withdram(self,amount):
+        if self.balance >= amount:
+          self.balance = self.balance - amount
+          print("Amount successfully withdrawn.")
+          self.getBalance()
+        else:
+          print("Amount cannot be withdrawn.")
+          self.getBalance()

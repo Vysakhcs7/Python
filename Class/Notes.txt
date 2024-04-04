@@ -7,7 +7,7 @@ which can contain data and code. Python fully supports OOP principles, allowing 
 modular code. Below is a detailed note on Object-Oriented Programming in Python:
 
 1. Classes and Objects:
-
+***********************
 Classes: In Python, a class is a blueprint or a template for creating objects. It defines the attributes (data) and 
 methods (functions) that all instances of the class will have. Classes are defined using the class keyword followed 
 by the class name.
@@ -15,9 +15,92 @@ by the class name.
 Objects: An object is an instance of a class. It represents a specific entity with its own set of attributes and 
 behaviors. Objects are created using the class constructor method (__init__), which initializes the object's 
 attributes. Multiple objects can be created from the same class, each with its own unique set of attribute values.
+The process of creating an object from a class is called instantiation.
 
+Creating an Object from a Class
+<object> = <ClassName>(<optional arguments>)
+
+Calling Methods of an Object
+<object>.<methodName>(<any arguments>)
+
+When you instantiate an object from a class, Python takes care of constructing the object (allocating memory) for you. 
+The special __init__() method is called the “initializer” method, where you give variables initial values.Most other 
+OOP languages require a method named new(), which is often referred to as a constructor.
+
+The variable name self is not a keyword in Python but is used by convention—any other name could be used and the code 
+would work fine. However, using self is a universally accepted practice in Python. If you want your code to be 
+understood by other Python programmers, use the name self as the first parameter in all methods of a class.Other OOP
+languages have the same concept but use other names, such as this or me.
+When you call a method on an object, Python automatically passes the object itself as the first argument to the method. By 
+convention, this parameter is named self, although you could technically name it anything you want.
+
+In Python, a constructor is a special method called __init__. It is automatically invoked when a new instance of a class is 
+created. The purpose of a constructor is to initialize the object's attributes with the values provided during instantiation.
+Here are some key points about constructors in Python:
+Name: The constructor method is named __init__.
+Parameters: The __init__ method can take parameters just like any other method, allowing you to pass initial values to the 
+object's attributes.
+Initialization: Inside the __init__ method, you can initialize the object's attributes using the parameters passed during 
+instantiation.
+Automatic Invocation: When you create a new instance of a class, Python automatically calls the __init__ method for that class.
+Instance Variables: Within the __init__ method, you typically use the self parameter to refer to the current instance of the 
+class. You then use dot notation (self.attribute) to access and initialize the object's attributes.
+
+Attributes:
+***********
+Attributes are data stored within a class or an instance of a class.
+They represent the state or characteristics of objects created from the class.
+Attributes are defined using variables within the class definition.
+Each object of the class has its own set of attributes.
+Attributes can be accessed using dot notation (object.attribute).
+
+Instance Attributes:
+********************
+Instance attributes are specific to each instance of a class.
+They are defined within the __init__ method of the class.
+Instance attributes are initialized with values unique to each object created from the class.
+They are accessed using dot notation (object.attribute).
+Instance attributes can be modified directly by assigning new values to them.
+
+Class Attributes:
+*****************
+Class attributes are shared among all instances of a class.
+They are defined outside of any method in the class.
+Class attributes are accessed using dot notation (Class.attribute) or through instances (object.attribute).
+Class attributes are typically used to store constants or shared data among all instances of the class.
+They can also be modified using dot notation or through instances, but any modification will affect all instances.
+
+Methods:
+********
+Methods in Python are functions defined within a class. They define the behavior or actions that objects of the class can perform. 
+Methods are crucial for encapsulating functionality within objects and enabling them to interact with their own data (attributes) 
+and with other objects. Here's a detailed explanation of methods in Python:
+
+Instance methods:
+*****************
+Instance methods are defined in a class and accessed through class instances. They operate on instance data and enable object 
+behavior. For example, a Car class may have a brake() method to simulate braking. Instance methods bundle data and behavior, 
+representing domain entities that can perform related actions. They empower reusability, abstraction, and measured quality, 
+streamlining development and maintenance.
+
+Class Methods:
+**************
+Methods defined inside a class can be invoked from an instance of that class or from the class itself. Class 
+methods have a place in a class instead of a specific class instance. They are associated with the class itself instead of 
+with class instances. This implies that a class method can be explicitly called from the class without requiring to instantiate 
+the class. Class methods are valuable for creating factory methods or performing some action related to the class as an entire 
+instead of a particular occurrence. For illustration, a class method may well be utilized to form new class instances or perform 
+a few initializations for the class.
+
+Static methods:
+***************
+belong to a class, not any instance. They can be called directly from the class or its instances. Static methods 
+access static fields, not instance fields. They perform actions related to the class itself, not any instance. Examples include 
+utility and factory methods. Static methods improve performance by avoiding object creation. However, they cannot access instance 
+variables or methods since they operate on the class, not any instance.
+_________________________________________________________________________________________________________________________________________________
 2. Encapsulation:
-
+*****************
 Encapsulation refers to the bundling of data and methods that operate on that data within a single unit, i.e., the class. 
 In Python, encapsulation can be achieved through the use of access specifiers:
 
@@ -28,25 +111,25 @@ double underscores (__).
 
 Protected: Members are accessible within the class itself and its subclasses. In Python, protected members are denoted by 
 prefixing them with a single underscore (_).
-
+_________________________________________________________________________________________________________________________________________________
 3. Inheritance:
-
+***************
 Inheritance is a mechanism in which a new class (subclass) can inherit properties and behaviors from an existing class 
 (superclass or parent class). The subclass can extend or modify the functionality of the superclass.
 In Python, a subclass inherits from a superclass by specifying the superclass name inside parentheses after the subclass 
 name in the class definition.
 Inheritance promotes code reuse, as common attributes and methods need not be redefined in every subclass.
-
+_________________________________________________________________________________________________________________________________________________
 4. Polymorphism:
-
+****************
 Polymorphism refers to the ability of different objects to respond to the same message (i.e., method call) in different ways. 
 It allows objects of different classes to be treated as objects of a common superclass.
 In Python, polymorphism can be achieved through method overriding, where a method in a subclass has the same name and signature 
 as a method in its superclass. When the method is called on an object, the appropriate method is executed based on the object's 
 actual class.
-
+_________________________________________________________________________________________________________________________________________________
 5. Abstraction:
-
+***************
 Abstraction is the process of hiding complex implementation details and showing only the essential features of an object to the 
 outside world. It allows programmers to focus on what an object does rather than how it does it.
 In Python, abstraction can be achieved through the use of abstract classes and interfaces. Abstract classes cannot be instantiated 
