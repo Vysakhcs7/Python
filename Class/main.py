@@ -26,3 +26,4 @@ oRectangle = Rectangle(width, height)
 
 # Call the display_details method to display the rectangle's details
 oRectangle.display_details()
+########################################################################################################  

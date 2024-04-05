@@ -12,6 +12,10 @@ Classes: In Python, a class is a blueprint or a template for creating objects. I
 methods (functions) that all instances of the class will have. Classes are defined using the class keyword followed 
 by the class name.
 
+Class variables are defined within the class construction. Because they are owned by the class itself, class variables are 
+shared by all instances of the class. They therefore will generally have the same value for every instance unless you are 
+using the class variable to initialize a variable.
+
 Objects: An object is an instance of a class. It represents a specific entity with its own set of attributes and 
 behaviors. Objects are created using the class constructor method (__init__), which initializes the object's 
 attributes. Multiple objects can be created from the same class, each with its own unique set of attribute values.
@@ -118,7 +122,24 @@ Inheritance is a mechanism in which a new class (subclass) can inherit propertie
 (superclass or parent class). The subclass can extend or modify the functionality of the superclass.
 In Python, a subclass inherits from a superclass by specifying the superclass name inside parentheses after the subclass 
 name in the class definition.
-Inheritance promotes code reuse, as common attributes and methods need not be redefined in every subclass.
+Class BaseClass:
+    {Body}
+Class DerivedClass(BaseClass):
+    {Body}
+
+Benefits of inheritance:
+************************
+Code reusability- we do not have to write the same code, again and again, we can just inherit the properties we need in a child class.
+It represents a real-world relationship between parent class and child class.
+It is transitive in nature. If a child class inherits properties from a parent class, then all other sub-classes of the child class 
+will also inherit the properties of the parent class.
+
+There are 5 different types of inheritance in Python. They are:
+Single Inheritance: a child class inherits from only one parent class.
+Multiple Inheritance: a child class inherits from multiple parent classes.
+Multilevel Inheritance: a child class inherits from its parent class, which is inheriting from its parent class.
+Hierarchical Inheritance: more than one child class are created from a single parent class.
+Hybrid Inheritance: combines more than one form of inheritance.
 _________________________________________________________________________________________________________________________________________________
 4. Polymorphism:
 ****************
