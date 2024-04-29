@@ -148,6 +148,20 @@ It allows objects of different classes to be treated as objects of a common supe
 In Python, polymorphism can be achieved through method overriding, where a method in a subclass has the same name and signature 
 as a method in its superclass. When the method is called on an object, the appropriate method is executed based on the object's 
 actual class.
+
+In Python, we can change the way operators work for user-defined types.
+For example, the + operator will perform arithmetic addition on two numbers, merge two lists, or concatenate two strings.
+This feature in Python that allows the same operator to have different meaning according to the context is called operator overloading.
+Eg: len() - string - returns length of string
+    len() - list - returns number of items
+
+Like in other programming languages, the child classes in Python also inherit methods and attributes from the parent class. We can redefine
+certain methods and attributes specifically to fit the child class, which is known as Method Overriding.
+
+Two or more methods have the same name but different numbers of parameters or different types of parameters, or both. These methods are called 
+overloaded methods and this is called method overloading. 
+Python does not support method overloading by default. But there are different ways to achieve method overloading in Python. 
+
 _________________________________________________________________________________________________________________________________________________
 5. Abstraction:
 ***************
