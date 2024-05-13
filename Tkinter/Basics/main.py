@@ -1,3 +1,46 @@
+# Import Module
+from tkinter import *
+
+# create root window
+root = Tk()
+
+# root window title and dimension
+root.title("Welcome to GeekForGeeks")
+# Set geometry(widthxheight)
+root.geometry('350x200')
+
+# adding a label to the root window
+#lbl = Label(root, text = "Are you a Geek?")
+
+
+# function to display text when
+# button is clicked
+def clicked():
+	lbl = Label(root, text = "Are you a Geek?")
+	lbl.grid()
+	
+lbl.configure(text = "I just got clicked")
+
+# button widget with red color text
+# inside
+btn = Button(root, text = "Click me" ,
+			fg = "red", command=clicked)
+# set Button grid
+btn.grid(column=1, row=0)
+
+# Execute Tkinter
+root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
 """
 #import tkinter module
 from tkinter import *
@@ -63,7 +106,7 @@ button_2 = Button(root,text = "Clear",command= clear_1)
 button_2.grid(row =3,column=2)
 
 root.mainloop()
-"""
+
 
 from tkinter import *
 
@@ -116,3 +159,4 @@ desired_unit_dropdown.grid(row=1, column=2, padx=5, pady=5, sticky="w")
 Button(root, text="Calculate", command=calculate_arr).grid(row=3, column=1, padx=10, pady=10)
 
 root.mainloop()
+"""
