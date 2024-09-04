@@ -16,7 +16,7 @@ def delete_files_with_extension(root_folder, extension):
                 print(f"{filename} has been deleted from {foldername}.")
 
 # Example usage:
-parent_folder = r"D:\Udemy Courses\Udemy - Mastering Microcontroller Timers, PWM, CAN, Low Power(MCU2) 2023-3"
+parent_folder = r"D:\Udemy Courses\Udemy - ARM Cortex M Microcontroller DMA Programming Demystified 2022-8"
 extension = ".vtt"
 
 delete_files_with_extension(parent_folder, extension)
